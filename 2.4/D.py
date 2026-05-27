@@ -1,7 +1,7 @@
-digit_sum = 0
-for _ in range(int(input())):
+last_number = 0
+for i in range(int(input())):
     number = int(input())
     while number:
-        digit_sum += number % 10
+        last_number += number % 10 
         number //= 10
-print(digit_sum)
+print(last_number)
