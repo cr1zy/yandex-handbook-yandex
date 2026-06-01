@@ -1,7 +1,8 @@
 letters = []
 while (text := input()) != 'ФИНИШ':
     for letter in text.lower():
-        letters.append(letter)
+        if letter != " ":
+            letters.append(letter)
 max_count = 0
 max_letter = ''
 for letter in letters:

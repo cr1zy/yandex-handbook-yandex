@@ -1,9 +1,5 @@
-while (string := input()) != '':
-
-    if string.endswith("@@@"):
-        continue
-
-    if string.startswith("##"):
-        print(string[2:])
-   
-    print(string)
+s = set()
+s.add(1)
+print(s)
+s.add(2)
+print(s)
