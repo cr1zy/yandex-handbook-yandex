@@ -7,3 +7,5 @@ suits.remove(input())
 
 for card, suit in product(cards, suits):
     print(card, suit)
+
+# 10 mins
