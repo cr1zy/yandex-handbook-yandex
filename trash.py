@@ -1,12 +1,10 @@
-from itertools import product
-
-cards = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'валет', 'дама', 'король', 'туз']
-suits = ['буби', 'пики', 'трефы', 'черви']
-suits.remove(input())
-cards.remove(input())
-suits_new = ['бубен', 'пик', 'треф', 'червей']
-
-for card, suit in product(cards, suits):
-    print(card, suit)
-
-# 10 mins
+from itertools import combinations
+def choose_best_sum(t, k, ls):
+    if len(ls) == 0:
+        return(None)
+    value = sorted(sum(i) for i in list(combinations(ls, k)) if sum(i) <= t)
+    if value != []:
+        return(value[-1])
+    else:
+        return(None)
+print(choose_best_sum(100, 2, []))
