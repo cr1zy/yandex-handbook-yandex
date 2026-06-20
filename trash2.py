@@ -10,6 +10,5 @@ def product(*args, **kwargs):
             temp_numb *= i
         if temp_numb != 1:
             final_list.append(temp_numb)
-
     return final_list
 print(product("Ann", "Bob", "Chuck", a=9, n=5, u=3, c=2, A=5))

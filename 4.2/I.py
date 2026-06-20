@@ -1,5 +1,14 @@
 def product(*args, **kwargs):
+    final_list = []
     for arg in args:
-        arg = set(arg.lower())
-    return arg
-print(product("Ann", "Bob", A=2, n=7, b=3))
+        lst_of_numbers = []
+        letters = list(set(arg))
+        for letter in letters:
+            lst_of_numbers.append(kwargs.get(letter, 1))
+        temp_numb = 1
+        for i in lst_of_numbers:
+            temp_numb *= i
+        if temp_numb != 1:
+            final_list.append(temp_numb)
+    return tuple(final_list)
+print(product("Ann", "Bob", "Chuck", a=9, n=5, u=3, c=2, A=5))
